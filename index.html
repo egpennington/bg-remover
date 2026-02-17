@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple web application that removes backgrounds from images using machine learning. Built with Python (FastAPI) for the backend and vanilla HTML/CSS/JavaScript for the frontend.">
+  <meta name="author" content="Pennington Programming">
+  <meta name="color-scheme" content="light dark">
+  <title>Background Remover</title>
+  <!-- Favicons / PWA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Background Remover</h1>
+            <p>Remove backgrounds instantly</p>
+        </header>
+        
+        <div class="card">
+            <section class="image-display">
+                    <div class="image-display-inner">
+                        <input type="file" id="image-input" accept="image/png, image/jpeg, image/webp" hidden>
+                        <label for="image-input" class="dropzone">
+                            <span id="icon" class="icon">📷</span>
+                            <p id="dropzone-title" class="dropzone-title">Choose an Image</p>
+                            <p class="upload-hint">PNG, JPG, or WEBP</p>
+                        </label>                  
+                    </div>
+                    <button id="remove-btn" class="btn removeBtn">Remove Background</button>                
+                </section>
+            
+            <section class="result">
+                <img id="result-image" class="result-image">
+            </section>
+
+            <a id="downloadLink" class="downloadBtn disabled" download="bg-removed.png">Download Image</a> 
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Project by <a href="https://emmettpennington.com"  target="_blank" rel="noopener noreferrer">penningtonProgramming</a></p>
+                <div class="footer-links">
+                <a href="https://github.com/egpennington/bg-remover"
+                target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-github"></i> 
+                View Source on GitHub
+                </a>
+            </div>
+        </footer>        
+    </main>
+  
+<script src="/main.js" defer></script>
+</body>
+</html>
