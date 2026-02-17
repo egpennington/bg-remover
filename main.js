@@ -4,6 +4,8 @@ const resultImage = document.getElementById("result-image")
 const downloadLink = document.getElementById("downloadLink")
 const dropzoneTitle = document.getElementById("dropzone-title")
 const icon = document.getElementById("icon")
+const spinner = document.querySelector(".spinner")
+const btnText = document.querySelector(".btn-text")
 
 imageInput.addEventListener("change", () => {
   const file = imageInput.files?.[0]
@@ -35,6 +37,11 @@ removeBtn.addEventListener("click", async () => {
   const formData = new FormData()
   formData.append("file", file)
 
+  /* Spinner add */
+  spinner.classList.remove("hidden")
+  btnText.textContent = "Processing..."
+  removeBtn.disabled = true
+
   try {
     const response = await fetch("http://127.0.0.1:8000/remove-bg", {
       method: "POST",
@@ -59,8 +66,20 @@ removeBtn.addEventListener("click", async () => {
     downloadLink.classList.remove("disabled")
     downloadLink.textContent = "Download PNG"
     downloadLink.style.display = "block"
+
+    /* Spinner stop */
+    spinner.classList.add("hidden")
+    btnText.textContent = "Remove Background"
+    removeBtn.disabled = false
+
   } catch (error) {
     console.error(error)
     alert("Something went wrong. Check console.")
-  }
+
+    /* Spinner in catch */
+    spinner.classList.add("hidden")
+    btnText.textContent = "Remove Background"
+    removeBtn.disabled = false
+
+  } 
 })

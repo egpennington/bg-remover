@@ -35,10 +35,18 @@
                             <p class="upload-hint">PNG, JPG, or WEBP</p>
                         </label>                  
                     </div>
-                    <button id="remove-btn" class="btn removeBtn">Remove Background</button>                
+                    <button id="remove-btn" class="btn removeBtn">
+                        <span class="btn-text">Remove Background</span>
+                        <span class="spinner hidden"></span>
+                    </button>               
                 </section>
             
             <section class="result">
+                <div id="loader" class="loader" hidden>
+                    <div class="spinner"></div>
+                    <p>Removing background…</p>
+                </div>
+
                 <img id="result-image" class="result-image">
             </section>
 
