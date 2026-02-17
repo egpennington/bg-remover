@@ -61,6 +61,7 @@ removeBtn.addEventListener("click", async () => {
     const timeStamp = now.toLocaleString().replace(/[:.]/g, "-")
 
     resultImage.src = imageUrl
+    document.querySelector(".result").style.display = "block"
     downloadLink.href = imageUrl
     downloadLink.download = `bg-removed-${timeStamp}.png` 
     downloadLink.classList.remove("disabled")

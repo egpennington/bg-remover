@@ -94,9 +94,10 @@ body {
 }
 
 .removeBtn.is-enabled:hover {
-    color: #333;
+  opacity: 0.75;
+    /* color: #333;
     background: #fff;
-    border: 1px solid #333;
+    border: 1px solid #333; */
 }
 
 .icon img {
@@ -154,6 +155,7 @@ body {
   align-items: center;
   min-height: 300px;
   margin-top: 10px;
+  display: none;
 }
 
 /* Spinner for download */
