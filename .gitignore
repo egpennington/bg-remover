@@ -4,6 +4,8 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.u2net/
+*.onnx
 
 # IDE
 .vscode/
