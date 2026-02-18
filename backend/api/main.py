@@ -4,6 +4,7 @@ import os
 os.environ["U2NET_HOME"] = "/tmp/.u2net"
 from rembg import remove
 from PIL import Image
+import io
 from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
 
