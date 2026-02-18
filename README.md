@@ -192,7 +192,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-Built following the tutorial "How to Go From Hello World to Building Real-World Applications" by Spruce Emmanuel
+Built following the tutorial "How to Go From Hello World to Building Real-World Applications" by Spruce Emmanuel on FreeCodeCamp
 
 ## 📬 Contact
 
@@ -201,3 +201,4 @@ Your Name
 GitHub: https://github.com/your_username  
 
 Live Project: https://PROJECT_NAME.netlify.app  
+
